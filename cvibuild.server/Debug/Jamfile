@@ -1,0 +1,50 @@
+CCFLAGS = -g ;
+HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2019\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "crc.c" = "c:\\Users\\airlc\\Desktop\\CVI" ;
+LOCATE on "crc.h" = "c:\\Users\\airlc\\Desktop\\CVI" ;
+LOCATE on "server.c" = "c:\\Users\\airlc\\Desktop\\CVI" ;
+LOCATE on "server.h" = "c:\\Users\\airlc\\Desktop\\CVI" ;
+Object "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\crc.obj" : "c:\\Users\\airlc\\Desktop\\CVI\\crc.c" ;
+FILENUM on "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\crc.obj" = 1 ;
+DEFPROTS on "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\crc.obj" = "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\crc.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\crc.obj" = "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\crc.obj.out" ;
+PrjObjects += "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\crc.obj" ;
+Object "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.obj" : "c:\\Users\\airlc\\Desktop\\CVI\\server.c" ;
+FILENUM on "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.obj" = 2 ;
+DEFPROTS on "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.obj" = "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.obj.cvidefprots" ;
+OUTFILE on "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.obj" = "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.obj.out" ;
+PrjObjects += "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.obj" ;
+Object "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\resources.res" : "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\resources.in.rc" ;
+Depends "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\resources.res" : "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\manifest.xml" ;
+MainFromObjects "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.exe" : "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\link_options.txt" ;
+Depends "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.exe" : "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\resources.res" ;
+Depends all : "c:\\Users\\airlc\\Desktop\\CVI\\cvibuild.server\\Debug\\server.exe" ;

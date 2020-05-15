@@ -1,0 +1,1 @@
+-force-include-file "crc.c";"c:\Users\airlc\Desktop\CVI\crc.c" -force-include-file "crc.h";"c:\Users\airlc\Desktop\CVI\crc.h" -force-include-file "server.c";"c:\Users\airlc\Desktop\CVI\server.c" -force-include-file "server.h";"c:\Users\airlc\Desktop\CVI\server.h" 

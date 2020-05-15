@@ -1,0 +1,10 @@
+[crcInit]
+Class="Function"
+Prototype="void crcInit();"
+SourceLocation="c:\Users\airlc\Desktop\CVI\crc.c:16:1"
+
+[crcCompute]
+Class="Function"
+Prototype="unsigned short crcCompute(unsigned char *message, unsigned int nBytes);"
+SourceLocation="c:\Users\airlc\Desktop\CVI\crc.c:51:1"
+
